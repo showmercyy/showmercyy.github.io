@@ -23,7 +23,7 @@
 
     .description {
       font-size: 20px;
-      margin-top: 10pz;
+      margin-top: 10px;
       margin-bottom: 10px;
       color: #2b2d2f;
       text-shadow: 0px 0px 10px #fff;
@@ -35,7 +35,6 @@
       height: 10px;
       background-color: rgba(43, 45, 47, 0.2);
       border-radius: 5px;
-      margin-top: 20px;
     }
     
     .song-player-progress-bar-fill {
@@ -57,7 +56,7 @@
       border: none;
       color: #2b2d2f;
       font-size: 20px;
-      margin: 0 10px;
+      margin-bottom: 10px;
       cursor: pointer;
       transition: opacity 0.3s ease-in-out;
     }
@@ -90,6 +89,7 @@
         <span class="cursor"></span>
       </div>
       <div class="song-player">
+        <div class="song-player-time"></div>
         <div class="song-player-progress-bar">
           <div class="song-player-progress-bar-fill"></div>
         </div>
@@ -98,7 +98,6 @@
             <i class="fas fa-play"></i>
           </button>
         </div>
-        <div class="song-player-time"></div>
       </div>
     </center>
     <audio id="bg-music" loop>
