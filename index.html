@@ -24,6 +24,11 @@
       color: #2b2d2f;
     }
 
+    .fade {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    
     .description {
       font-size: 20px;
       margin-top: 10px;
@@ -91,7 +96,7 @@
       }
     }
   </style>
-  <body>
+  <body class="fade">
     <center>
       <div>
         <a href="https://discord.gg/emi">
@@ -126,6 +131,13 @@
       <source src="music.mp3" type="audio/mpeg">
     </audio>
     <script>
+      window.addEventListener("DOMContentLoaded", function() {
+        const fadeElements = document.querySelectorAll(".fade");
+        fadeElements.forEach(element => {
+          element.style.opacity = 1;
+        });
+      });
+      
       const typedTextSpan = document.querySelector(".typed");
       const cursorSpan = document.querySelector(".cursor");
 
