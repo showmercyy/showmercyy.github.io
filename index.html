@@ -16,9 +16,23 @@
       height: 100vh;
     }
   </style>
-  <body>
+  <body onclick="player()">
     <center>
       <img src="https://cdn.discordapp.com/attachments/1140131764027797505/1141558935422259231/IMG_1770.gif">
     </center>
+    <audio id="music">
+      <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+      const audio = document.getElementById("music");
+        function player() {
+          if (audio.paused) {
+            audio.play();
+          } else {
+            audio.pause();
+            audio.currentTime = 0;
+          }
+        }
+    </script>
   </body>
 </html>
