@@ -32,10 +32,12 @@ body {
 .preview {
     width: 60%;
     text-align: center;
+    margin: auto; /* Center the Bitmoji preview */
 }
 
 .preview img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
     border: 1px solid #ccc;
 }
 
@@ -59,6 +61,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center; /* Center the button text */
 }
 
 .item-button:hover {
@@ -88,6 +91,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center; /* Center the button text */
 }
 
 .save-item-button:hover {
