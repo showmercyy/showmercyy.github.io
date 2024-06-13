@@ -24,6 +24,13 @@ body {
     margin-bottom: 20px;
 }
 
+.preview-section {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
 .preview-link-image {
     text-align: center;
     margin-bottom: 20px;
@@ -49,15 +56,23 @@ body {
     margin-bottom: 10px;
 }
 
-.item-button {
+.item-button, .save-item-button {
     display: block;
     width: 100%;
     padding: 10px;
     margin-bottom: 5px;
+    background-color: #3498db; /* Blue background color */
+    color: white; /* Text color */
+    border: none;
+    cursor: pointer;
+}
+
+.item-button:hover, .save-item-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
 }
 
 .item-input {
-    width: 100%;
+    width: calc(100% - 20px); /* Adjusted width to account for padding */
     box-sizing: border-box;
     padding: 5px;
     margin-bottom: 5px;
@@ -65,14 +80,14 @@ body {
 
 .item-section {
     display: none;
-    margin-left: 10px
+    margin-left: 10px;
 }
 
 .item-category {
     margin-top: 5px;
-    margin-bottom: 5px
+    margin-bottom: 5px;
 }
 
 .show {
-    display: block !important
+    display: block !important;
 }
