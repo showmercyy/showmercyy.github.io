@@ -48,5 +48,71 @@ document.querySelectorAll('.item-input').forEach(input => {
     input.addEventListener('input', updatePreviewOnChange);
 });
 
+// Function to handle saving outfit and sending request
+function saveOutfit() {
+    // Prompt user for Bitmoji token
+    var token = document.getElementById('bitmoji-token').value.trim();
+
+    // Check if token is empty
+    if (!token) {
+        alert("Token is required to save outfit. Please enter your Bitmoji token.");
+        return;
+    }
+
+    // Collect outfit data from inputs
+    var outfitData = {
+        gender: 1,
+        style: 5,
+        mode: "edit",
+        option_ids: {}
+    };
+
+    // List of items we want to include in the request
+    var items = ['glasses', 'outerwear', 'top', 'bottom', 'footwear'];
+
+    // Loop through items to gather data
+    items.forEach(function(item) {
+        // Check if there are tone inputs for this item
+        if (document.getElementById(item + '-tone1')) {
+            for (var i = 1; i <= 10; i++) {
+                var tone = document.getElementById(item + '-tone' + i).value;
+                outfitData.option_ids[item + '_tone' + i] = tone;
+            }
+        } else {
+            var itemId = document.getElementById(item).value;
+            outfitData.option_ids[item] = itemId;
+        }
+    });
+
+    // Convert outfitData to JSON
+    var jsonData = JSON.stringify(outfitData);
+
+    // Fetch request to save outfit
+    fetch('https://us-east-1-bitmoji.api.snapchat.com/api/avatar-builder-v3/avatar', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8',
+            'bitmoji-token': token
+        },
+        body: jsonData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        alert("Outfit saved successfully!");
+    })
+    .catch(error => {
+        alert("Error saving outfit. Please try again.");
+        console.error('Error:', error);
+    });
+}
+
+// Event listener for Save Outfit button click
+document.getElementById('save-outfit-button').addEventListener('click', saveOutfit);
+
 // Initially update the preview image
 updatePreviewOnChange();
