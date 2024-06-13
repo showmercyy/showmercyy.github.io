@@ -33,14 +33,10 @@ function updateUrlParameter(url, param, value) {
     }
 }
 
-function showSection(sectionId) {
-    var sections = document.getElementsByClassName('item-section');
-    for (var i = 0; i < sections.length; i++) {
-        sections[i].style.display = 'none';
-    }
-
-    document.getElementById(sectionId).style.display = 'block';
-}
+// Bind the updatePreviewImage function to the blur event of the tone input fields
+document.querySelectorAll('.item-input').forEach(input => {
+    input.addEventListener('blur', updatePreviewImage);
+});
 
 // Initially update the preview image
 updatePreviewImage();
