@@ -38,5 +38,14 @@ document.querySelectorAll('.item-input').forEach(input => {
     input.addEventListener('blur', updatePreviewImage);
 });
 
+function showSection(sectionId) {
+    var sections = document.getElementsByClassName('item-section');
+    for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = 'none';
+    }
+
+    document.getElementById(sectionId).style.display = 'block';
+}
+
 // Initially update the preview image
 updatePreviewImage();
