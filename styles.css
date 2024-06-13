@@ -24,20 +24,13 @@ body {
     margin-bottom: 20px;
 }
 
-.preview, .items {
-    display: inline-block;
-    vertical-align: top;
-}
-
 .preview {
     width: 60%;
     text-align: center;
-    margin: auto; /* Center the Bitmoji preview */
 }
 
 .preview img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
     border: 1px solid #ccc;
 }
 
@@ -46,63 +39,33 @@ body {
     padding-left: 20px;
 }
 
-.items-title {
-    font-weight: bold;
-    margin-bottom: 5px;
+.items div {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .item-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 5px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center; /* Center the button text */
+    margin-right: 10px;
 }
 
-.item-button:hover {
-    background-color: #0056b3;
+.item-id {
+    flex: 1;
+}
+
+.items-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.save-item-button {
+    margin-left: 10px;
 }
 
 .item-section {
     display: none;
-    margin-top: 20px;
 }
 
-.item-input {
-    width: calc(100% - 20px);
-    padding: 5px;
-    margin-bottom: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px
-
-/* Existing styles */
-
-.item-id {
-    width: calc(100% - 20px);
-    padding: 5px;
-    margin-bottom: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-.item-button {
+.show {
     display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 5px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center; /* Center the button text */
 }
-
-.item-button:hover {
-    background-color: #0056b3;
-} 
