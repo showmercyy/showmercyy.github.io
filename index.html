@@ -8,20 +8,106 @@
 </head>
 <body>
     <div class="container">
-        <div class="title">Bitmoji Customizer</div>
-        <div class="preview">
-            <img id="preview-image" src="https://via.placeholder.com/600x400" alt="Preview">
-        </div>
-        <div class="items">
-            <div>Items:</div>
-            <div><a href="item.html?category=hat">Hat</a></div>
-            <div><a href="item.html?category=glasses">Glasses</a></div>
-            <div><a href="item.html?category=outerwear">Outerwear</a></div>
-            <div><a href="item.html?category=top">Top</a></div>
-            <div><a href="item.html?category=bottom">Bottom</a></div>
-            <div><a href="item.html?category=footwear">Footwear</a></div>
+        <div class="site-title">Bitmoji Customizer</div>
+        <div class="content">
+            <div class="preview-link-image" id="preview-link-image">Preview link image</div>
+            <div class="items">
+                <div class="items-title">Items:</div>
+                <button onclick="showSection('hat-section')" class="item-button">Hat</button>
+                <button onclick="showSection('glasses-section')" class="item-button">Glasses</button>
+                <button onclick="showSection('outerwear-section')" class="item-button">Outerwear</button>
+                <button onclick="showSection('top-section')" class="item-button">Top</button>
+                <button onclick="showSection('bottom-section')" class="item-button">Bottom</button>
+                <button onclick="showSection('footwear-section')" class="item-button">Footwear</button>
+            </div>
+            <div class="sections">
+                <div id="hat-section" class="item-section">
+                    <div class="items-title">Enter Hat Tones:</div>
+                    <input type="text" class="item-input" placeholder="Hat tone 1" id="hat-tone1">
+                    <input type="text" class="item-input" placeholder="Hat tone 2" id="hat-tone2">
+                    <input type="text" class="item-input" placeholder="Hat tone 3" id="hat-tone3">
+                    <input type="text" class="item-input" placeholder="Hat tone 4" id="hat-tone4">
+                    <input type="text" class="item-input" placeholder="Hat tone 5" id="hat-tone5">
+                    <input type="text" class="item-input" placeholder="Hat tone 6" id="hat-tone6">
+                    <input type="text" class="item-input" placeholder="Hat tone 7" id="hat-tone7">
+                    <input type="text" class="item-input" placeholder="Hat tone 8" id="hat-tone8">
+                    <input type="text" class="item-input" placeholder="Hat tone 9" id="hat-tone9">
+                    <button class="save-item-button" onclick="saveItem('hat', 9)">Save Hat</button>
+                </div>
+                <div id="glasses-section" class="item-section">
+                    <div class="items-title">Enter Glasses Tones:</div>
+                    <input type="text" class="item-input" placeholder="Glasses tone 1" id="glasses-tone1">
+                    <input type="text" class="item-input" placeholder="Glasses tone 2" id="glasses-tone2">
+                    <input type="text" class="item-input" placeholder="Glasses tone 3" id="glasses-tone3">
+                    <input type="text" class="item-input" placeholder="Glasses tone 4" id="glasses-tone4">
+                    <input type="text" class="item-input" placeholder="Glasses tone 5" id="glasses-tone5">
+                    <input type="text" class="item-input" placeholder="Glasses tone 6" id="glasses-tone6">
+                    <input type="text" class="item-input" placeholder="Glasses tone 7" id="glasses-tone7">
+                    <input type="text" class="item-input" placeholder="Glasses tone 8" id="glasses-tone8">
+                    <input type="text" class="item-input" placeholder="Glasses tone 9" id="glasses-tone9">
+                    <input type="text" class="item-input" placeholder="Glasses tone 10" id="glasses-tone10">
+                    <button class="save-item-button" onclick="saveItem('glasses', 10)">Save Glasses</button>
+                </div>
+                <div id="outerwear-section" class="item-section">
+                    <div class="items-title">Enter Outerwear Tones:</div>
+                    <input type="text" class="item-input" placeholder="Outerwear tone 1" id="outerwear-tone1">
+                    <input type="text" class="item-input" placeholder="Outerwear tone 2" id="outerwear-tone2">
+                    <input type="text" class="item-input" placeholder="Outerwear tone 3" id="outerwear-tone3">
+                    <input type="text" class="item-input" placeholder="Outerwear tone 4" id="outerwear-tone4">
+                    <input type="text" class="item-input" placeholder="Outerwear tone 5" id="outerwear-tone5">
+                    <input type="text" class="item-input" placeholder="Outerwear tone 6" id="outerwear-tone6">
+                    <input type="text" class="item-input" placeholder="Outerwear tone 7" id="outerwear-tone7">
+                    <input type="text" class="item-input" placeholder="Outerwear tone 8" id="outerwear-tone8">
+                    <input type="text" class="item-input" placeholder="Outerwear tone 9" id="outerwear-tone9">
+                    <input type="text" class="item-input" placeholder="Outerwear tone 10" id="outerwear-tone10">
+                    <button class="save-item-button" onclick="saveItem('outerwear', 10)">Save Outerwear</button>
+                </div>
+                <div id="top-section" class="item-section">
+                    <div class="items-title">Enter Top Tones:</div>
+                    <input type="text" class="item-input" placeholder="Top tone 1" id="top-tone1">
+                    <input type="text" class="item-input" placeholder="Top tone 2" id="top-tone2">
+                    <input type="text" class="item-input" placeholder="Top tone 3" id="top-tone3">
+                    <input type="text" class="item-input" placeholder="Top tone 4" id="top-tone4">
+                    <input type="text" class="item-input" placeholder="Top tone 5" id="top-tone5">
+                    <input type="text" class="item-input" placeholder="Top tone 6" id="top-tone6">
+                    <input type="text" class="item-input" placeholder="Top tone 7" id="top-tone7">
+                    <input type="text" class="item-input" placeholder="Top tone 8" id="top-tone8">
+                    <input type="text" class="item-input" placeholder="Top tone 9" id="top-tone9">
+                    <input type="text" class="item-input" placeholder="Top tone 10" id="top-tone10">
+                    <button class="save-item-button" onclick="saveItem('top', 10)">Save Top</button>
+                </div>
+                <div id="bottom-section" class="item-section">
+                    <div class="items-title">Enter Bottom Tones:</div>
+                    <input type="text" class="item-input" placeholder="Bottom tone 1" id="bottom-tone1">
+                    <input type="text" class="item-input" placeholder="Bottom tone 2" id="bottom-tone2">
+                    <input type="text" class="item-input" placeholder="Bottom tone 3" id="bottom-tone3">
+                    <input type="text" class="item-input" placeholder="Bottom tone 4" id="bottom-tone4">
+                    <input type="text" class="item-input" placeholder="Bottom tone 5" id="bottom-tone5">
+                    <input type="text" class="item-input" placeholder="Bottom tone 6" id="bottom-tone6">
+                    <input type="text" class="item-input" placeholder="Bottom tone 7" id="bottom-tone7">
+                    <input type="text" class="item-input" placeholder="Bottom tone 8" id="bottom-tone8">
+                    <input type="text" class="item-input" placeholder="Bottom tone 9" id="bottom-tone9">
+                    <input type="text" class="item-input" placeholder="Bottom tone 10" id="bottom-tone10">
+                    <button class="save-item-button" onclick="saveItem('bottom', 10)">Save Bottom</button>
+                </div>
+                <div id="footwear-section" class="item-section">
+                    <div class="items-title">Enter Footwear Tones:</div>
+                    <input type="text" class="item-input" placeholder="Footwear tone 1" id="footwear-tone1">
+                    <input type="text" class="item-input" placeholder="Footwear tone 2" id="footwear-tone2">
+                    <input type="text" class="item-input" placeholder="Footwear tone 3" id="footwear-tone3">
+                    <input type="text" class="item-input" placeholder="Footwear tone 4" id="footwear-tone4">
+                    <input type="text" class="item-input" placeholder="Footwear tone 5" id="footwear-tone5">
+                    <input type="text" class="item-input" placeholder="Footwear tone 6" id="footwear-tone6">
+                    <input type="text" class="item-input" placeholder="Footwear tone 7" id="footwear-tone7">
+                    <input type="text" class="item-input" placeholder="Footwear tone 8" id="footwear-tone8">
+                    <input type="text" class="item-input" placeholder="Footwear tone 9" id="footwear-tone9">
+                    <input type="text" class="item-input" placeholder="Footwear tone 10" id="footwear-tone10">
+                    <button class="save-item-button" onclick="saveItem('footwear', 10)">Save Footwear</button>
+                </div>
+            </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
