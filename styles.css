@@ -18,42 +18,62 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.title {
+.site-title {
     text-align: center;
     font-size: 2em;
     margin-bottom: 20px;
 }
 
-.preview, .items {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.preview {
-    width: 60%;
+.preview-link-image {
     text-align: center;
-}
-
-.preview img {
-    width: 100%;
-    border: 1px solid #ccc;
+    margin-bottom: 20px;
 }
 
 .items {
-    width: 30%;
-    padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.items div {
-    margin-bottom: 10px;
+.item-button {
+    flex: 0 0 20%;
+    margin: 5px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
 }
 
-.items a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1.2em;
+.sections {
+    margin-top: 20px;
 }
 
-.items a:hover {
-    text-decoration: underline;
+.item-section {
+    display: none;
+    margin-top: 10px;
 }
+
+.items-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.item-input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.save-item-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-item-button:hover {
+    background-color: #0056b3;
+} 
