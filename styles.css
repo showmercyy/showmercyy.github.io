@@ -65,6 +65,7 @@ body {
 
 .item-section {
     display: none;
+    margin-left: 10px
 }
 
 .show {
