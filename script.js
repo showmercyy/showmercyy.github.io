@@ -39,12 +39,15 @@ document.querySelectorAll('.item-input').forEach(input => {
 });
 
 function showSection(sectionId) {
-    var sections = document.getElementsByClassName('item-section');
-    for (var i = 0; i < sections.length; i++) {
-        sections[i].style.display = 'none';
-    }
+    var sections = document.querySelectorAll('.item-section');
+    sections.forEach(function(section) {
+        section.style.display = 'none';
+    });
 
-    document.getElementById(sectionId).style.display = 'block';
+    var sectionToShow = document.getElementById(sectionId);
+    if (sectionToShow) {
+        sectionToShow.style.display = 'block';
+    }
 }
 
 // Initially update the preview image
