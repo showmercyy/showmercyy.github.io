@@ -1,8 +1,40 @@
-// script.js
+function updatePreviewLink() {
+    var baseUrl = 'https://preview.bitmoji.com/bm-preview/v3/avatar/body?scale=1&gender=1&style=5&rotation=0&beard=-1&body=3';
+    var params = '';
 
-document.addEventListener("DOMContentLoaded", function() {
-    const previewImage = document.getElementById('preview-image');
-    const defaultUrl = "https://preview.bitmoji.com/bm-preview/v3/avatar/body?scale=1&gender=1&style=5&rotation=0&beard=-1&body=3&bottom=10001401&breast=0&brow=1538&cheek_details=-1&clothing_type=1&ear=1424&eye=1619&eyelash=-1&eye_size=0&eye_spacing=0&face_proportion=1&footwear=10000504&glasses=8758&hair=2673&hair_tone=3613466&hair_treatment_tone=3353384&hat=&is_tucked=0&jaw=1388&mouth=2337&nose=1436&pupil=2152&pupil_tone=16711680&skin_tone=12434877&sock=1201&top=1219";
+    // Hat tones
+    for (var i = 1; i <= 9; i++) {
+        var tone = document.getElementById('hat-tone' + i).value;
+        params += '&hat_tone' + i + '=' + tone;
+    }
 
-    previewImage.src = defaultUrl;
-});
+    // Other tones (glasses, outerwear, top, bottom, footwear)
+    var items = ['glasses', 'outerwear', 'top', 'bottom', 'footwear'];
+    items.forEach(function (item) {
+        for (var i = 1; i <= 10; i++) {
+            var tone = document.getElementById(item + '-tone' + i).value;
+            params += '&' + item + '_tone' + i + '=' + tone;
+        }
+    });
+
+    var previewLink = baseUrl + params;
+    document.getElementById('preview-link-image').innerHTML = '<a href="' + previewLink + '" target="_blank">Preview link image</a>';
+}
+
+function showSection(sectionId) {
+    var sections = document.getElementsByClassName('item-section');
+    for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = 'none';
+    }
+
+    document.getElementById(sectionId).style.display = 'block';
+}
+
+function saveItem(item, count) {
+    console.log('Saving ' + item);
+    // Add logic to save item here
+    alert('Saved ' + item + ' with ' + count + ' tones.');
+}
+
+// Initially update the preview link
+updatePreviewLink();
