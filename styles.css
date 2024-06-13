@@ -68,6 +68,11 @@ body {
     margin-left: 10px
 }
 
+.item-category {
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
 .show {
     display: block;
 }
