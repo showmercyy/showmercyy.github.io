@@ -30,11 +30,5 @@ function showSection(sectionId) {
     document.getElementById(sectionId).style.display = 'block';
 }
 
-function saveItem(item, count) {
-    console.log('Saving ' + item);
-    // Add logic to save item here
-    alert('Saved ' + item + ' with ' + count + ' tones.');
-}
-
 // Initially update the preview image
 updatePreviewImage();
