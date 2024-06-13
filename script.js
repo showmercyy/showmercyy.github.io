@@ -1,4 +1,4 @@
-function updatePreviewLink() {
+ function updatePreviewImage() {
     var baseUrl = 'https://preview.bitmoji.com/bm-preview/v3/avatar/body?scale=1&gender=1&style=5&rotation=0&beard=-1&body=3';
     var params = '';
 
@@ -17,8 +17,8 @@ function updatePreviewLink() {
         }
     });
 
-    var previewLink = baseUrl + params;
-    document.getElementById('preview-link-image').innerHTML = '<a href="' + previewLink + '" target="_blank">Preview link image</a>';
+    var previewUrl = baseUrl + params;
+    document.getElementById('preview-image').src = previewUrl;
 }
 
 function showSection(sectionId) {
@@ -36,5 +36,5 @@ function saveItem(item, count) {
     alert('Saved ' + item + ' with ' + count + ' tones.');
 }
 
-// Initially update the preview link
-updatePreviewLink();
+// Initially update the preview image
+updatePreviewImage();
